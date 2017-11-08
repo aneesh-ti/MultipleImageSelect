@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MultipleImageSelect</string>
+    <string name="album_view">Select photo album</string>
+    <string name="image_view">Tap to select images</string>
+
+    <string name="add">ADD</string>
+    <string name="selected">selected</string>
+    <string name="limit_exceeded">Can select a maximum of %d image</string>
+    <string name="error_null_cursor">Oops, something went wrong!</string>
+
+</resources>

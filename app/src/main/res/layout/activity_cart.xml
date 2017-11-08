@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="true"
+    android:scrollbars="vertical"
+        android:layout_marginTop="30dp"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/small"
+        android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/empty_cart"
+    android:visibility="gone"
+    android:gravity="center"
+    android:paddingTop="20dp"
+    android:text="No items added in your cart"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/medium"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical">
+            <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/camera_selected_list"
+                android:layout_below="@+id/selected_list"
+                android:smoothScrollbar="true"
+                android:scrollbars="vertical"
+                android:divider="@color/white"
+                android:nestedScrollingEnabled="true"
+                android:layout_height="wrap_content"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:id="@+id/selected_list"
+            android:layout_below="@+id/header"
+            android:smoothScrollbar="true"
+            android:scrollbars="vertical"
+            android:divider="@color/white"
+            android:nestedScrollingEnabled="true"
+            android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"
+        android:layout_gravity="top"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List of Images"
+            android:textColor="@color/black"
+            android:padding="@dimen/medium"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:id="@+id/selected_count"
+            android:text="Selected"
+            android:padding="@dimen/medium"/>
+    </LinearLayout>
+</FrameLayout>
